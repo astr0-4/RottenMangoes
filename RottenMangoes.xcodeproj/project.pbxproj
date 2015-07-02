@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		FAB8E9DF1B443D7B006EACD8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8E9DE1B443D7B006EACD8 /* main.m */; };
 		FAB8E9E21B443D7B006EACD8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8E9E11B443D7B006EACD8 /* AppDelegate.m */; };
-		FAB8E9E51B443D7B006EACD8 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8E9E41B443D7B006EACD8 /* MasterViewController.m */; };
 		FAB8E9E81B443D7B006EACD8 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8E9E71B443D7B006EACD8 /* DetailViewController.m */; };
 		FAB8E9EB1B443D7B006EACD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB8E9E91B443D7B006EACD8 /* Main.storyboard */; };
 		FAB8E9ED1B443D7B006EACD8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB8E9EC1B443D7B006EACD8 /* Images.xcassets */; };
 		FAB8E9F01B443D7B006EACD8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB8E9EE1B443D7B006EACD8 /* LaunchScreen.xib */; };
 		FAB8E9FC1B443D7C006EACD8 /* RottenMangoesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8E9FB1B443D7C006EACD8 /* RottenMangoesTests.m */; };
+		FAB8EA071B444472006EACD8 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8EA061B444472006EACD8 /* Movie.m */; };
+		FAB8EA0A1B44564D006EACD8 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8EA091B44564D006EACD8 /* CollectionViewController.m */; };
+		FAB8EA0D1B445F28006EACD8 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8EA0C1B445F28006EACD8 /* MovieCell.m */; };
+		FAB8EA101B448BD5006EACD8 /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8EA0F1B448BD5006EACD8 /* Review.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,8 +36,6 @@
 		FAB8E9DE1B443D7B006EACD8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FAB8E9E01B443D7B006EACD8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FAB8E9E11B443D7B006EACD8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FAB8E9E31B443D7B006EACD8 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		FAB8E9E41B443D7B006EACD8 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		FAB8E9E61B443D7B006EACD8 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		FAB8E9E71B443D7B006EACD8 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		FAB8E9EA1B443D7B006EACD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,6 +44,14 @@
 		FAB8E9F51B443D7C006EACD8 /* RottenMangoesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RottenMangoesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB8E9FA1B443D7C006EACD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAB8E9FB1B443D7C006EACD8 /* RottenMangoesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RottenMangoesTests.m; sourceTree = "<group>"; };
+		FAB8EA051B444472006EACD8 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		FAB8EA061B444472006EACD8 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		FAB8EA081B44564D006EACD8 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		FAB8EA091B44564D006EACD8 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		FAB8EA0B1B445F28006EACD8 /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
+		FAB8EA0C1B445F28006EACD8 /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
+		FAB8EA0E1B448BD5006EACD8 /* Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Review.h; sourceTree = "<group>"; };
+		FAB8EA0F1B448BD5006EACD8 /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Review.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +95,14 @@
 			children = (
 				FAB8E9E01B443D7B006EACD8 /* AppDelegate.h */,
 				FAB8E9E11B443D7B006EACD8 /* AppDelegate.m */,
-				FAB8E9E31B443D7B006EACD8 /* MasterViewController.h */,
-				FAB8E9E41B443D7B006EACD8 /* MasterViewController.m */,
+				FAB8EA0B1B445F28006EACD8 /* MovieCell.h */,
+				FAB8EA0C1B445F28006EACD8 /* MovieCell.m */,
+				FAB8EA051B444472006EACD8 /* Movie.h */,
+				FAB8EA061B444472006EACD8 /* Movie.m */,
+				FAB8EA0E1B448BD5006EACD8 /* Review.h */,
+				FAB8EA0F1B448BD5006EACD8 /* Review.m */,
+				FAB8EA081B44564D006EACD8 /* CollectionViewController.h */,
+				FAB8EA091B44564D006EACD8 /* CollectionViewController.m */,
 				FAB8E9E61B443D7B006EACD8 /* DetailViewController.h */,
 				FAB8E9E71B443D7B006EACD8 /* DetailViewController.m */,
 				FAB8E9E91B443D7B006EACD8 /* Main.storyboard */,
@@ -225,8 +240,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAB8E9E21B443D7B006EACD8 /* AppDelegate.m in Sources */,
-				FAB8E9E51B443D7B006EACD8 /* MasterViewController.m in Sources */,
+				FAB8EA0A1B44564D006EACD8 /* CollectionViewController.m in Sources */,
+				FAB8EA0D1B445F28006EACD8 /* MovieCell.m in Sources */,
+				FAB8EA071B444472006EACD8 /* Movie.m in Sources */,
 				FAB8E9DF1B443D7B006EACD8 /* main.m in Sources */,
+				FAB8EA101B448BD5006EACD8 /* Review.m in Sources */,
 				FAB8E9E81B443D7B006EACD8 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

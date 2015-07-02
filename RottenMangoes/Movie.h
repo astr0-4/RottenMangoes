@@ -11,9 +11,9 @@
 @interface Movie : NSObject
 
 @property(nonatomic, strong) NSString *movieTitle;
-@property(nonatomic, strong) NSArray *movieReviews;
+//@property(nonatomic, strong) NSArray *movieReviews;
 @property(nonatomic, strong) NSString *thumbnail;
 @property(nonatomic, strong) NSString *link;
-@property(nonatomic, strong) NSMutableArray *reviews;
+//@property(nonatomic, strong) NSMutableArray *reviews;
 
 @end

@@ -168,7 +168,24 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="80" y="259" width="240" height="21"/>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="80" y="259" width="240" height="21"/>
+                                </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4I-VA-UQl">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Show Theatre Map">
+                                    <color key="titleColor" red="1" green="0.22237983019999999" blue="0.49318654779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="123" y="608" width="155" height="33"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="LIE-U9-q0q" kind="show" identifier="showMapView" id="NAT-c7-pf3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -182,6 +199,7 @@
                                 <exclude reference="hl8-yG-Iwt"/>
                                 <exclude reference="WZ4-bc-bTY"/>
                                 <exclude reference="N0R-Oi-UWR"/>
+                                <exclude reference="N4I-VA-UQl"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -197,7 +215,14 @@
                                 <include reference="N0R-Oi-UWR"/>
                             </mask>
                         </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="N4I-VA-UQl"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="criticLabel1" destination="CW5-wx-SJu" id="fYp-ek-hd3"/>
                         <outlet property="criticLabel2" destination="N0R-Oi-UWR" id="Mfk-OX-UoB"/>
@@ -213,6 +238,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2365.5" y="-114"/>
+        </scene>
+        <!--Theatre Locations-->
+        <scene sceneID="tj2-Xx-cxi">
+            <objects>
+                <viewController id="LIE-U9-q0q" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qZz-FD-cZH"/>
+                        <viewControllerLayoutGuide type="bottom" id="zpq-Hh-f4c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Voc-nO-OR9">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HVf-JN-2la">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <connections>
+                                    <outlet property="delegate" destination="LIE-U9-q0q" id="qRU-f2-wpJ"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="HVf-JN-2la" secondAttribute="bottom" id="2DY-r0-cGL"/>
+                            <constraint firstItem="HVf-JN-2la" firstAttribute="leading" secondItem="Voc-nO-OR9" secondAttribute="leading" id="HHd-Uz-IAt"/>
+                            <constraint firstAttribute="trailing" secondItem="HVf-JN-2la" secondAttribute="trailing" id="R8l-fw-tWm"/>
+                            <constraint firstItem="HVf-JN-2la" firstAttribute="top" secondItem="qZz-FD-cZH" secondAttribute="bottom" constant="692" id="o62-Mm-lnV">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="HVf-JN-2la"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="2DY-r0-cGL"/>
+                                <exclude reference="HHd-Uz-IAt"/>
+                                <exclude reference="R8l-fw-tWm"/>
+                                <exclude reference="o62-Mm-lnV"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="HVf-JN-2la"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="2DY-r0-cGL"/>
+                                <include reference="HHd-Uz-IAt"/>
+                                <include reference="R8l-fw-tWm"/>
+                                <include reference="o62-Mm-lnV"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Theatre Locations" id="Jyl-vB-rwq" userLabel="Theatre Locations">
+                        <barButtonItem key="rightBarButtonItem" title="Near me" id="8Zl-xz-8V8">
+                            <connections>
+                                <action selector="showTheatreLocations:" destination="LIE-U9-q0q" id="cC9-kk-ad9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="HVf-JN-2la" id="6Hy-Pk-Bu3"/>
+                        <outlet property="myLocationButton" destination="8Zl-xz-8V8" id="uMS-Lc-JKZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rSq-OQ-bek" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3084" y="-114"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="m9g-lx-KP2">

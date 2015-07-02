@@ -37,8 +37,6 @@
                 movie.thumbnail = [[movieDict objectForKey:@"posters"] objectForKey:@"thumbnail"];
                 movie.link = [[movieDict objectForKey:@"links"] objectForKey:@"reviews"];
                 [moviesTemp addObject:movie];
-               // NSLog(@"movie thumbnail: %@", movie.thumbnail);
-               // NSLog(@"movie: %@", movie.movieTitle);
             }
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.movieObjects = [moviesTemp mutableCopy];
@@ -49,8 +47,6 @@
     
     [task resume];
 
-    
-  //  [self getReviews];
     
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -91,9 +87,6 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MovieCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    
-    
-    
     [self getMovieImage:indexPath forCell:cell];
     return cell;
 }

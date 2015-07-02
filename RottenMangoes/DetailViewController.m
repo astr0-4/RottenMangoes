@@ -8,10 +8,9 @@
 
 #import "DetailViewController.h"
 #import "Movie.h"
-#import "CollectionViewController.h"
+#import "MapViewController.h"
 
 @interface DetailViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *movieTitleLabel;
 
 @property (weak, nonatomic) IBOutlet UITextView *reviewQuote1;
 @property (weak, nonatomic) IBOutlet UILabel *criticLabel1;
@@ -61,13 +60,9 @@
 
 }
 
-                                          
-                                  
-
 - (void)configureView {
     // Update the user interface for the detail item.
     NSLog(@"self.reviews %@", self.reviews);
-    self.movieTitleLabel.text = self.movie.movieTitle;
     self.criticLabel1.text = self.reviews[0];
     self.freshnessLabel1.text = self.reviews[1];
     self.reviewQuote1.text = self.reviews[2];
@@ -88,14 +83,19 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.title = @"";
     [self getReviews];
-    
-
-    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"showMapView"]) {
+        MapViewController *mapViewController = (MapViewController *)segue.destinationViewController;
+        mapViewController.movie = self.movie;
+    }
 }
 
 @end

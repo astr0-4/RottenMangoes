@@ -36,7 +36,7 @@
             [self.locationManager requestWhenInUseAuthorization];
         }
     }
-    [self getTheatreLocations];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,6 +70,7 @@
     NSString *postalCode = [self.postalCode stringByReplacingOccurrencesOfString:@" " withString:@""];
     NSString *link = [NSString stringWithFormat:@"http://lighthouse-movie-showtimes.herokuapp.com/theatres.json?address=%@&movie=%@", postalCode, self.movie.movieTitle];
     NSLog(@"link: %@", link);
+    // to do: add error handling
     NSURL *url = [NSURL URLWithString:link];
    
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -83,6 +84,7 @@
                 Theatre *theatre = [[Theatre alloc] init];
                 theatre.postalCode = postalCode;
                 theatre.theatreName = [theatreDict objectForKey:@"name"];
+                theatre.theatreType = [theatre.theatreName getFirstWord];
                 MKPointAnnotation *marker = [[MKPointAnnotation alloc] init];
                 marker.coordinate = CLLocationCoordinate2DMake([[theatreDict objectForKey:@"lat"] doubleValue] , [[theatreDict objectForKey:@"lng"] doubleValue]);
                 marker.title = [theatreDict objectForKey:@"name"];
@@ -92,6 +94,41 @@
     }];
     [task resume];
   }
+
+-(UIImage *)imageForTheatreType:(NSString *)theatreType {
+    if ([theatreType isEqualToString:@"Cineplex"]) {
+        return [UIImage imageNamed:@"galaxy_pin"];
+    }
+    else if([theatreType isEqualToString:@"SilverCity"]){
+        return [UIImage imageNamed:@"colossus_pin"];
+    }
+    
+    else {
+        return [UIImage imageNamed:@"theatre_pin"];
+    }
+                
+    
+}
+
+
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    if (annotation == self.mapView.userLocation) {
+        return nil;
+    }
+    
+    MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"TheatreLocation"];
+    if (!annotationView) {
+        annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"TheatreLocation"];
+        NSString *imageTitle = [annotation.title getFirstWord];
+        annotationView.image = [self imageForTheatreType:imageTitle];
+        annotationView.centerOffset = CGPointMake(0, -annotationView.image.size.height / 2);
+        annotationView.canShowCallout = YES;
+    }
+    
+    return annotationView;
+}
+
 
 
 
@@ -132,6 +169,7 @@
             self.postalCode = placemark.postalCode;
             NSLog(@"placemark postalCode %@", placemark.postalCode);
             NSLog(@"postal Code %@", self.postalCode);
+           // [self getTheatreLocations];
         }
     }];
 }

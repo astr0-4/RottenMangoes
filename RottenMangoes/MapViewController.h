@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Movie.h"
 #import "Theatre.h"
+#import "NSString+Words.h"
 
 @interface MapViewController : UIViewController
 

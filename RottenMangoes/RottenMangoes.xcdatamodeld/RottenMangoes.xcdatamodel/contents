@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Movie" syncable="YES">
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="movieTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnail" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="showtimes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Showtime" inverseName="movie" inverseEntity="Showtime" syncable="YES"/>
+        <relationship name="theatres" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Theatre" inverseName="movies" inverseEntity="Theatre" syncable="YES"/>
+    </entity>
+    <entity name="Showtime" syncable="YES">
+        <relationship name="movie" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Movie" inverseName="showtimes" inverseEntity="Movie" syncable="YES"/>
+        <relationship name="theatre" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Theatre" inverseName="showtimes" inverseEntity="Theatre" syncable="YES"/>
+    </entity>
+    <entity name="Theatre" syncable="YES">
+        <attribute name="postalCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="theatreName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="theatreType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="movies" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Movie" inverseName="theatres" inverseEntity="Movie" syncable="YES"/>
+        <relationship name="showtimes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Showtime" inverseName="theatre" inverseEntity="Showtime" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Movie" positionX="-200" positionY="-270" width="128" height="118"/>
+        <element name="Theatre" positionX="169" positionY="-270" width="128" height="118"/>
+        <element name="Showtime" positionX="-9" positionY="-1" width="128" height="73"/>
+    </elements>
+</model>

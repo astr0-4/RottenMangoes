@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ia5-r4-bWz">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -149,8 +150,7 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="80" y="317" width="240" height="84"/>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="26" y="326" width="348" height="80"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="JLm-yU-9cN"/>
                                     </mask>
@@ -224,9 +224,6 @@
                                     <color key="titleColor" red="1" green="0.22237983019999999" blue="0.49318654779999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="128" y="658" width="145" height="33"/>
-                                </variation>
                                 <connections>
                                     <segue destination="LIE-U9-q0q" kind="show" identifier="showMapView" id="NAT-c7-pf3"/>
                                 </connections>
@@ -341,30 +338,30 @@
                                 <exclude reference="Lfl-AC-bEQ"/>
                                 <exclude reference="bFA-Rm-vnp"/>
                                 <exclude reference="fTz-Ij-Ida"/>
-                                <exclude reference="Mru-r7-Zlq"/>
-                                <exclude reference="RW9-KH-pzk"/>
-                                <exclude reference="U8l-KO-Iuh"/>
-                                <exclude reference="Nq8-GL-KTE"/>
-                                <exclude reference="YZC-km-JEp"/>
-                                <exclude reference="pE2-b3-4R0"/>
                                 <exclude reference="IM4-AA-Lmg"/>
                                 <exclude reference="geo-EU-W18"/>
                                 <exclude reference="tjS-LN-GBO"/>
+                                <exclude reference="Nq8-GL-KTE"/>
+                                <exclude reference="YZC-km-JEp"/>
+                                <exclude reference="pE2-b3-4R0"/>
+                                <exclude reference="DPY-7i-aKE"/>
+                                <exclude reference="N2N-Ff-7OR"/>
+                                <exclude reference="RF5-4n-Uop"/>
+                                <exclude reference="csI-p2-x5a"/>
+                                <exclude reference="jMr-k9-CWo"/>
+                                <exclude reference="cgy-hS-NRB"/>
+                                <exclude reference="gxN-JU-ta1"/>
+                                <exclude reference="cpK-lD-1DP"/>
+                                <exclude reference="Mru-r7-Zlq"/>
+                                <exclude reference="RW9-KH-pzk"/>
+                                <exclude reference="U8l-KO-Iuh"/>
+                                <exclude reference="HoS-eW-40S"/>
+                                <exclude reference="Z7g-mV-yil"/>
+                                <exclude reference="uFg-e6-btj"/>
                                 <exclude reference="Yyg-zm-Qrk"/>
                                 <exclude reference="fK4-8j-YE4"/>
                                 <exclude reference="hQ5-oW-gyU"/>
                                 <exclude reference="hVG-Fa-WeU"/>
-                                <exclude reference="RF5-4n-Uop"/>
-                                <exclude reference="csI-p2-x5a"/>
-                                <exclude reference="jMr-k9-CWo"/>
-                                <exclude reference="DPY-7i-aKE"/>
-                                <exclude reference="N2N-Ff-7OR"/>
-                                <exclude reference="HoS-eW-40S"/>
-                                <exclude reference="Z7g-mV-yil"/>
-                                <exclude reference="uFg-e6-btj"/>
-                                <exclude reference="cgy-hS-NRB"/>
-                                <exclude reference="gxN-JU-ta1"/>
-                                <exclude reference="cpK-lD-1DP"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -391,30 +388,30 @@
                                 <include reference="Lfl-AC-bEQ"/>
                                 <include reference="bFA-Rm-vnp"/>
                                 <include reference="fTz-Ij-Ida"/>
-                                <include reference="Mru-r7-Zlq"/>
-                                <include reference="RW9-KH-pzk"/>
-                                <include reference="U8l-KO-Iuh"/>
-                                <include reference="Nq8-GL-KTE"/>
-                                <include reference="YZC-km-JEp"/>
-                                <include reference="pE2-b3-4R0"/>
                                 <include reference="IM4-AA-Lmg"/>
                                 <include reference="geo-EU-W18"/>
                                 <include reference="tjS-LN-GBO"/>
+                                <include reference="Nq8-GL-KTE"/>
+                                <include reference="YZC-km-JEp"/>
+                                <include reference="pE2-b3-4R0"/>
+                                <include reference="DPY-7i-aKE"/>
+                                <include reference="N2N-Ff-7OR"/>
+                                <include reference="RF5-4n-Uop"/>
+                                <include reference="csI-p2-x5a"/>
+                                <include reference="jMr-k9-CWo"/>
+                                <include reference="cgy-hS-NRB"/>
+                                <exclude reference="gxN-JU-ta1"/>
+                                <include reference="cpK-lD-1DP"/>
+                                <include reference="Mru-r7-Zlq"/>
+                                <include reference="RW9-KH-pzk"/>
+                                <include reference="U8l-KO-Iuh"/>
+                                <include reference="HoS-eW-40S"/>
+                                <include reference="Z7g-mV-yil"/>
+                                <include reference="uFg-e6-btj"/>
                                 <include reference="Yyg-zm-Qrk"/>
                                 <include reference="fK4-8j-YE4"/>
                                 <exclude reference="hQ5-oW-gyU"/>
                                 <include reference="hVG-Fa-WeU"/>
-                                <include reference="RF5-4n-Uop"/>
-                                <include reference="csI-p2-x5a"/>
-                                <include reference="jMr-k9-CWo"/>
-                                <include reference="DPY-7i-aKE"/>
-                                <include reference="N2N-Ff-7OR"/>
-                                <include reference="HoS-eW-40S"/>
-                                <include reference="Z7g-mV-yil"/>
-                                <include reference="uFg-e6-btj"/>
-                                <include reference="cgy-hS-NRB"/>
-                                <exclude reference="gxN-JU-ta1"/>
-                                <include reference="cpK-lD-1DP"/>
                             </mask>
                         </variation>
                     </view>
@@ -445,6 +442,7 @@
                         <viewControllerLayoutGuide type="bottom" id="zpq-Hh-f4c"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Voc-nO-OR9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVf-JN-2la">

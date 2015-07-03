@@ -12,6 +12,6 @@
 
 @interface CollectionViewController : UICollectionViewController
 
-@property NSArray *movieObjects;
+@property (strong, nonatomic) NSArray *movieObjects;
 
 @end

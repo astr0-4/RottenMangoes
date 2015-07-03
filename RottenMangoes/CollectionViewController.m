@@ -21,6 +21,9 @@
     
     NSURL *url = [NSURL URLWithString:urlString];
     
+    //NSOperations
+    
+    
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         NSError *jsonError;
         NSDictionary *moviesDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];

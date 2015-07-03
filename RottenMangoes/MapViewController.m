@@ -8,6 +8,7 @@
 
 #import "MapViewController.h"
 
+
 @import MapKit;
 
 @interface MapViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
@@ -17,6 +18,7 @@
 @property (strong, nonatomic) NSString *postalCode;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *myLocationButton;
+
 
 @end
 
@@ -34,12 +36,12 @@
             [self.locationManager requestWhenInUseAuthorization];
         }
     }
-   // [self getTheatreLocations];
+    [self getTheatreLocations];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
 -(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
@@ -52,13 +54,14 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     CLLocation *currentLocation = [locations lastObject];
-    NSLog(@"%@", currentLocation);
+   // NSLog(@"%@", currentLocation);
     
     if (!self.initialLocationSet) {
         self.initialLocationSet = YES;
         
         MKCoordinateRegion region = MKCoordinateRegionMake(currentLocation.coordinate, MKCoordinateSpanMake(0.01, 0.01));
         [self reverseGeocode:currentLocation];
+        NSLog(@"reverse geocode happened");
         [self.mapView setRegion:region animated:YES];
     }
 }
@@ -77,10 +80,13 @@
         } else {
             NSArray *theatreArray = [theatresDict objectForKey:@"theatres"];
             for(NSDictionary *theatreDict in theatreArray) {
+                Theatre *theatre = [[Theatre alloc] init];
+                theatre.postalCode = postalCode;
+                theatre.theatreName = [theatreDict objectForKey:@"name"];
                 MKPointAnnotation *marker = [[MKPointAnnotation alloc] init];
                 marker.coordinate = CLLocationCoordinate2DMake([[theatreDict objectForKey:@"lat"] doubleValue] , [[theatreDict objectForKey:@"lng"] doubleValue]);
                 marker.title = [theatreDict objectForKey:@"name"];
-                 [self.mapView addAnnotation:marker];
+                [self.mapView addAnnotation:marker];
                 }
             }
     }];
@@ -124,6 +130,7 @@
         } else {
             CLPlacemark *placemark = [placemarks lastObject];
             self.postalCode = placemark.postalCode;
+            NSLog(@"placemark postalCode %@", placemark.postalCode);
             NSLog(@"postal Code %@", self.postalCode);
         }
     }];

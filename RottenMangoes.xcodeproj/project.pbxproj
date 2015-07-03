@@ -10,6 +10,7 @@
 		FA09FB941B45AA7C00CB0224 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA09FB931B45AA7C00CB0224 /* MapKit.framework */; };
 		FA09FB971B45AAA900CB0224 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA09FB961B45AAA900CB0224 /* MapViewController.m */; };
 		FA09FB991B45DD6600CB0224 /* Location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FA09FB981B45DD6600CB0224 /* Location.gpx */; };
+		FA09FB9C1B46DE1500CB0224 /* Theatre.m in Sources */ = {isa = PBXBuildFile; fileRef = FA09FB9B1B46DE1500CB0224 /* Theatre.m */; };
 		FAB8E9DF1B443D7B006EACD8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8E9DE1B443D7B006EACD8 /* main.m */; };
 		FAB8E9E21B443D7B006EACD8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8E9E11B443D7B006EACD8 /* AppDelegate.m */; };
 		FAB8E9E81B443D7B006EACD8 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8E9E71B443D7B006EACD8 /* DetailViewController.m */; };
@@ -37,6 +38,8 @@
 		FA09FB951B45AAA900CB0224 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		FA09FB961B45AAA900CB0224 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		FA09FB981B45DD6600CB0224 /* Location.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
+		FA09FB9A1B46DE1500CB0224 /* Theatre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theatre.h; sourceTree = "<group>"; };
+		FA09FB9B1B46DE1500CB0224 /* Theatre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theatre.m; sourceTree = "<group>"; };
 		FAB8E9D91B443D7B006EACD8 /* RottenMangoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RottenMangoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB8E9DD1B443D7B006EACD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAB8E9DE1B443D7B006EACD8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -104,6 +107,8 @@
 				FAB8EA0C1B445F28006EACD8 /* MovieCell.m */,
 				FAB8EA051B444472006EACD8 /* Movie.h */,
 				FAB8EA061B444472006EACD8 /* Movie.m */,
+				FA09FB9A1B46DE1500CB0224 /* Theatre.h */,
+				FA09FB9B1B46DE1500CB0224 /* Theatre.m */,
 				FAB8EA081B44564D006EACD8 /* CollectionViewController.h */,
 				FAB8EA091B44564D006EACD8 /* CollectionViewController.m */,
 				FAB8E9E61B443D7B006EACD8 /* DetailViewController.h */,
@@ -248,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAB8E9E21B443D7B006EACD8 /* AppDelegate.m in Sources */,
+				FA09FB9C1B46DE1500CB0224 /* Theatre.m in Sources */,
 				FAB8EA0A1B44564D006EACD8 /* CollectionViewController.m in Sources */,
 				FAB8EA0D1B445F28006EACD8 /* MovieCell.m in Sources */,
 				FAB8EA071B444472006EACD8 /* Movie.m in Sources */,

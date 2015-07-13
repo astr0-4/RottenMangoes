@@ -10,7 +10,7 @@
 #import "Movie.h"
 #import "MovieCell.h"
 
-@interface CollectionViewController : UICollectionViewController
+@interface MovieViewController : UICollectionViewController
 
 @property (strong, nonatomic) NSArray *movieObjects;
 

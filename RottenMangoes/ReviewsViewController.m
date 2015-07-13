@@ -6,11 +6,11 @@
 //  Copyright (c) 2015 Alex. All rights reserved.
 //
 
-#import "DetailViewController.h"
+#import "ReviewsViewController.h"
 #import "Movie.h"
-#import "MapViewController.h"
+#import "TheatreMapViewController.h"
 
-@interface DetailViewController ()
+@interface ReviewsViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextView *reviewQuote1;
 @property (weak, nonatomic) IBOutlet UILabel *criticLabel1;
@@ -26,7 +26,7 @@
 
 @end
 
-@implementation DetailViewController
+@implementation ReviewsViewController
 
 #pragma mark - Managing the detail item
 
@@ -93,7 +93,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"showMapView"]) {
-        MapViewController *mapViewController = (MapViewController *)segue.destinationViewController;
+        TheatreMapViewController *mapViewController = (TheatreMapViewController *)segue.destinationViewController;
         mapViewController.movie = self.movie;
     }
 }

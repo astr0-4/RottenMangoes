@@ -6,23 +6,24 @@
 //  Copyright (c) 2015 Alex. All rights reserved.
 //
 
-#import "MapViewController.h"
+#import "TheatreMapViewController.h"
 
 
 @import MapKit;
 
-@interface MapViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
+@interface TheatreMapViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
 
 @property (assign) BOOL initialLocationSet;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) NSString *postalCode;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *myLocationButton;
+@property (strong, nonatomic) NSArray *theatres;
 
 
 @end
 
-@implementation MapViewController
+@implementation TheatreMapViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -79,6 +80,7 @@
         if(!theatresDict) {
             NSLog(@"there was an error! %@", error);
         } else {
+             NSMutableArray *tempTheatres = [[NSMutableArray alloc] init];
             NSArray *theatreArray = [theatresDict objectForKey:@"theatres"];
             for(NSDictionary *theatreDict in theatreArray) {
                 Theatre *theatre = [[Theatre alloc] init];
@@ -89,6 +91,8 @@
                 marker.coordinate = CLLocationCoordinate2DMake([[theatreDict objectForKey:@"lat"] doubleValue] , [[theatreDict objectForKey:@"lng"] doubleValue]);
                 marker.title = [theatreDict objectForKey:@"name"];
                 [self.mapView addAnnotation:marker];
+                [tempTheatres addObject:theatre];
+                self.theatres = [tempTheatres mutableCopy];
                 }
             }
     }];
@@ -122,7 +126,7 @@
         annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"TheatreLocation"];
         NSString *imageTitle = [annotation.title getFirstWord];
         annotationView.image = [self imageForTheatreType:imageTitle];
-        annotationView.centerOffset = CGPointMake(0, -annotationView.image.size.height / 2);
+        annotationView.centerOffset = CGPointMake(0, -(annotationView.image.size.height / 2));
         annotationView.canShowCallout = YES;
     }
     
@@ -161,7 +165,6 @@
     CLGeocoder *geocoder = [[CLGeocoder alloc] init];
     [geocoder reverseGeocodeLocation:location completionHandler:
      ^(NSArray *placemarks, NSError *error) {
-         NSLog(@"Finding address");
         if (error) {
             NSLog(@"Error %@", error);
         } else {
@@ -169,7 +172,6 @@
             self.postalCode = placemark.postalCode;
             NSLog(@"placemark postalCode %@", placemark.postalCode);
             NSLog(@"postal Code %@", self.postalCode);
-           // [self getTheatreLocations];
         }
     }];
 }

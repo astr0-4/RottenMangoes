@@ -9,7 +9,7 @@
         <!--Rotten Mangoes-->
         <scene sceneID="ION-un-X8x">
             <objects>
-                <collectionViewController id="hAe-g0-P5K" customClass="CollectionViewController" sceneMemberID="viewController">
+                <collectionViewController id="hAe-g0-P5K" customClass="MovieViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="nVi-lo-QDU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,7 +81,7 @@
         <!--Detail-->
         <scene sceneID="Cn3-H9-jdl">
             <objects>
-                <viewController title="Detail" id="Ah7-4n-0Wa" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController title="Detail" id="Ah7-4n-0Wa" customClass="ReviewsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cIm-e0-J51"/>
                         <viewControllerLayoutGuide type="bottom" id="a0L-h9-sNL"/>
@@ -436,7 +436,7 @@
         <!--Theatre Locations-->
         <scene sceneID="tj2-Xx-cxi">
             <objects>
-                <viewController id="LIE-U9-q0q" customClass="MapViewController" sceneMemberID="viewController">
+                <viewController id="LIE-U9-q0q" customClass="TheatreMapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qZz-FD-cZH"/>
                         <viewControllerLayoutGuide type="bottom" id="zpq-Hh-f4c"/>

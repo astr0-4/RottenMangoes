@@ -11,7 +11,7 @@
 #import "Theatre.h"
 #import "NSString+Words.h"
 
-@interface MapViewController : UIViewController
+@interface TheatreMapViewController : UIViewController
 
 
 @property (strong, nonatomic) Movie *movie;

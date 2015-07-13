@@ -6,14 +6,14 @@
 //  Copyright (c) 2015 Alex. All rights reserved.
 //
 
-#import "CollectionViewController.h"
-#import "DetailViewController.h"
+#import "MovieViewController.h"
+#import "ReviewsViewController.h"
 
-@interface CollectionViewController ()
+@interface MovieViewController ()
 
 @end
 
-@implementation CollectionViewController
+@implementation MovieViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -69,7 +69,7 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"showDetail"]) {
-        DetailViewController *detailViewController = (DetailViewController *)segue.destinationViewController;
+        ReviewsViewController *detailViewController = (ReviewsViewController *)segue.destinationViewController;
         NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] firstObject];
         detailViewController.movie = self.movieObjects[indexPath.item];
     }

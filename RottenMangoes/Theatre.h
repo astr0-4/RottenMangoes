@@ -18,6 +18,7 @@
 @property (nonatomic, retain) NSString * postalCode;
 @property (nonatomic, retain) NSSet *movies;
 @property (nonatomic, retain) NSSet *showtimes;
+
 @end
 
 @interface Theatre (CoreDataGeneratedAccessors)

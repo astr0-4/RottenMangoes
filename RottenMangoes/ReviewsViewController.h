@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Movie.h"
 
-@interface DetailViewController : UIViewController
+@interface ReviewsViewController : UIViewController
 
 @property (strong, nonatomic) NSArray *reviews;
 @property(nonatomic, strong) Movie *movie;

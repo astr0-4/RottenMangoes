@@ -8,20 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		FA09FB941B45AA7C00CB0224 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA09FB931B45AA7C00CB0224 /* MapKit.framework */; };
-		FA09FB971B45AAA900CB0224 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA09FB961B45AAA900CB0224 /* MapViewController.m */; };
+		FA09FB971B45AAA900CB0224 /* TheatreMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA09FB961B45AAA900CB0224 /* TheatreMapViewController.m */; };
 		FA09FB991B45DD6600CB0224 /* Location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FA09FB981B45DD6600CB0224 /* Location.gpx */; };
-		FA09FB9C1B46DE1500CB0224 /* Theatre.m in Sources */ = {isa = PBXBuildFile; fileRef = FA09FB9B1B46DE1500CB0224 /* Theatre.m */; };
 		FA09FBA51B46FE3B00CB0224 /* NSString+Words.m in Sources */ = {isa = PBXBuildFile; fileRef = FA09FBA41B46FE3B00CB0224 /* NSString+Words.m */; };
 		FA09FBDF1B470C7000CB0224 /* RottenMangoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA09FBDD1B470C7000CB0224 /* RottenMangoes.xcdatamodeld */; };
+		FA09FBE51B47162000CB0224 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = FA09FBE41B47162000CB0224 /* Movie.m */; };
+		FA09FBE81B47162000CB0224 /* Theatre.m in Sources */ = {isa = PBXBuildFile; fileRef = FA09FBE71B47162000CB0224 /* Theatre.m */; };
+		FA09FBEE1B47602800CB0224 /* Showtime.m in Sources */ = {isa = PBXBuildFile; fileRef = FA09FBED1B47602800CB0224 /* Showtime.m */; };
 		FAB8E9DF1B443D7B006EACD8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8E9DE1B443D7B006EACD8 /* main.m */; };
 		FAB8E9E21B443D7B006EACD8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8E9E11B443D7B006EACD8 /* AppDelegate.m */; };
-		FAB8E9E81B443D7B006EACD8 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8E9E71B443D7B006EACD8 /* DetailViewController.m */; };
+		FAB8E9E81B443D7B006EACD8 /* ReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8E9E71B443D7B006EACD8 /* ReviewsViewController.m */; };
 		FAB8E9EB1B443D7B006EACD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB8E9E91B443D7B006EACD8 /* Main.storyboard */; };
 		FAB8E9ED1B443D7B006EACD8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB8E9EC1B443D7B006EACD8 /* Images.xcassets */; };
 		FAB8E9F01B443D7B006EACD8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB8E9EE1B443D7B006EACD8 /* LaunchScreen.xib */; };
 		FAB8E9FC1B443D7C006EACD8 /* RottenMangoesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8E9FB1B443D7C006EACD8 /* RottenMangoesTests.m */; };
-		FAB8EA071B444472006EACD8 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8EA061B444472006EACD8 /* Movie.m */; };
-		FAB8EA0A1B44564D006EACD8 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8EA091B44564D006EACD8 /* CollectionViewController.m */; };
+		FAB8EA0A1B44564D006EACD8 /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8EA091B44564D006EACD8 /* MovieViewController.m */; };
 		FAB8EA0D1B445F28006EACD8 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8EA0C1B445F28006EACD8 /* MovieCell.m */; };
 /* End PBXBuildFile section */
 
@@ -37,31 +38,33 @@
 
 /* Begin PBXFileReference section */
 		FA09FB931B45AA7C00CB0224 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		FA09FB951B45AAA900CB0224 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		FA09FB961B45AAA900CB0224 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		FA09FB951B45AAA900CB0224 /* TheatreMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheatreMapViewController.h; sourceTree = "<group>"; };
+		FA09FB961B45AAA900CB0224 /* TheatreMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheatreMapViewController.m; sourceTree = "<group>"; };
 		FA09FB981B45DD6600CB0224 /* Location.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
-		FA09FB9A1B46DE1500CB0224 /* Theatre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theatre.h; sourceTree = "<group>"; };
-		FA09FB9B1B46DE1500CB0224 /* Theatre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theatre.m; sourceTree = "<group>"; };
 		FA09FBA31B46FE3B00CB0224 /* NSString+Words.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Words.h"; sourceTree = "<group>"; };
 		FA09FBA41B46FE3B00CB0224 /* NSString+Words.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Words.m"; sourceTree = "<group>"; };
 		FA09FBDE1B470C7000CB0224 /* RottenMangoes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RottenMangoes.xcdatamodel; sourceTree = "<group>"; };
+		FA09FBE31B47162000CB0224 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		FA09FBE41B47162000CB0224 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		FA09FBE61B47162000CB0224 /* Theatre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theatre.h; sourceTree = "<group>"; };
+		FA09FBE71B47162000CB0224 /* Theatre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theatre.m; sourceTree = "<group>"; };
+		FA09FBEC1B47602800CB0224 /* Showtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Showtime.h; sourceTree = "<group>"; };
+		FA09FBED1B47602800CB0224 /* Showtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Showtime.m; sourceTree = "<group>"; };
 		FAB8E9D91B443D7B006EACD8 /* RottenMangoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RottenMangoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB8E9DD1B443D7B006EACD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAB8E9DE1B443D7B006EACD8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FAB8E9E01B443D7B006EACD8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FAB8E9E11B443D7B006EACD8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FAB8E9E61B443D7B006EACD8 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		FAB8E9E71B443D7B006EACD8 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		FAB8E9E61B443D7B006EACD8 /* ReviewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReviewsViewController.h; sourceTree = "<group>"; };
+		FAB8E9E71B443D7B006EACD8 /* ReviewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReviewsViewController.m; sourceTree = "<group>"; };
 		FAB8E9EA1B443D7B006EACD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAB8E9EC1B443D7B006EACD8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FAB8E9EF1B443D7B006EACD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FAB8E9F51B443D7C006EACD8 /* RottenMangoesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RottenMangoesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB8E9FA1B443D7C006EACD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAB8E9FB1B443D7C006EACD8 /* RottenMangoesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RottenMangoesTests.m; sourceTree = "<group>"; };
-		FAB8EA051B444472006EACD8 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
-		FAB8EA061B444472006EACD8 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
-		FAB8EA081B44564D006EACD8 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
-		FAB8EA091B44564D006EACD8 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		FAB8EA081B44564D006EACD8 /* MovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieViewController.h; sourceTree = "<group>"; };
+		FAB8EA091B44564D006EACD8 /* MovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieViewController.m; sourceTree = "<group>"; };
 		FAB8EA0B1B445F28006EACD8 /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
 		FAB8EA0C1B445F28006EACD8 /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,22 +109,24 @@
 		FAB8E9DB1B443D7B006EACD8 /* RottenMangoes */ = {
 			isa = PBXGroup;
 			children = (
+				FA09FBEC1B47602800CB0224 /* Showtime.h */,
+				FA09FBED1B47602800CB0224 /* Showtime.m */,
+				FA09FBE61B47162000CB0224 /* Theatre.h */,
+				FA09FBE71B47162000CB0224 /* Theatre.m */,
+				FA09FBE31B47162000CB0224 /* Movie.h */,
+				FA09FBE41B47162000CB0224 /* Movie.m */,
 				FAB8E9E01B443D7B006EACD8 /* AppDelegate.h */,
 				FAB8E9E11B443D7B006EACD8 /* AppDelegate.m */,
 				FAB8EA0B1B445F28006EACD8 /* MovieCell.h */,
 				FAB8EA0C1B445F28006EACD8 /* MovieCell.m */,
-				FAB8EA051B444472006EACD8 /* Movie.h */,
-				FAB8EA061B444472006EACD8 /* Movie.m */,
-				FA09FB9A1B46DE1500CB0224 /* Theatre.h */,
-				FA09FB9B1B46DE1500CB0224 /* Theatre.m */,
 				FA09FBA31B46FE3B00CB0224 /* NSString+Words.h */,
 				FA09FBA41B46FE3B00CB0224 /* NSString+Words.m */,
-				FAB8EA081B44564D006EACD8 /* CollectionViewController.h */,
-				FAB8EA091B44564D006EACD8 /* CollectionViewController.m */,
-				FAB8E9E61B443D7B006EACD8 /* DetailViewController.h */,
-				FAB8E9E71B443D7B006EACD8 /* DetailViewController.m */,
-				FA09FB951B45AAA900CB0224 /* MapViewController.h */,
-				FA09FB961B45AAA900CB0224 /* MapViewController.m */,
+				FAB8EA081B44564D006EACD8 /* MovieViewController.h */,
+				FAB8EA091B44564D006EACD8 /* MovieViewController.m */,
+				FAB8E9E61B443D7B006EACD8 /* ReviewsViewController.h */,
+				FAB8E9E71B443D7B006EACD8 /* ReviewsViewController.m */,
+				FA09FB951B45AAA900CB0224 /* TheatreMapViewController.h */,
+				FA09FB961B45AAA900CB0224 /* TheatreMapViewController.m */,
 				FA09FB981B45DD6600CB0224 /* Location.gpx */,
 				FAB8E9E91B443D7B006EACD8 /* Main.storyboard */,
 				FAB8E9EC1B443D7B006EACD8 /* Images.xcassets */,
@@ -262,14 +267,15 @@
 			files = (
 				FA09FBDF1B470C7000CB0224 /* RottenMangoes.xcdatamodeld in Sources */,
 				FAB8E9E21B443D7B006EACD8 /* AppDelegate.m in Sources */,
-				FA09FB9C1B46DE1500CB0224 /* Theatre.m in Sources */,
-				FAB8EA0A1B44564D006EACD8 /* CollectionViewController.m in Sources */,
+				FA09FBEE1B47602800CB0224 /* Showtime.m in Sources */,
+				FAB8EA0A1B44564D006EACD8 /* MovieViewController.m in Sources */,
 				FAB8EA0D1B445F28006EACD8 /* MovieCell.m in Sources */,
-				FAB8EA071B444472006EACD8 /* Movie.m in Sources */,
 				FA09FBA51B46FE3B00CB0224 /* NSString+Words.m in Sources */,
+				FA09FBE81B47162000CB0224 /* Theatre.m in Sources */,
 				FAB8E9DF1B443D7B006EACD8 /* main.m in Sources */,
-				FAB8E9E81B443D7B006EACD8 /* DetailViewController.m in Sources */,
-				FA09FB971B45AAA900CB0224 /* MapViewController.m in Sources */,
+				FA09FBE51B47162000CB0224 /* Movie.m in Sources */,
+				FAB8E9E81B443D7B006EACD8 /* ReviewsViewController.m in Sources */,
+				FA09FB971B45AAA900CB0224 /* TheatreMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

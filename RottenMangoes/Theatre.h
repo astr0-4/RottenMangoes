@@ -7,11 +7,29 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-@interface Theatre : NSObject
+#import <CoreData/CoreData.h>
 
-@property (nonatomic, strong) NSString *postalCode;
-@property (nonatomic, strong) NSString *theatreName;
-@property (nonatomic, strong) NSString *theatreType;
+@class Movie, Showtime;
+
+@interface Theatre : NSManagedObject
+
+@property (nonatomic, retain) NSString * theatreName;
+@property (nonatomic, retain) NSString * theatreType;
+@property (nonatomic, retain) NSString * postalCode;
+@property (nonatomic, retain) NSSet *movies;
+@property (nonatomic, retain) NSSet *showtimes;
+@end
+
+@interface Theatre (CoreDataGeneratedAccessors)
+
+- (void)addMoviesObject:(Movie *)value;
+- (void)removeMoviesObject:(Movie *)value;
+- (void)addMovies:(NSSet *)values;
+- (void)removeMovies:(NSSet *)values;
+
+- (void)addShowtimesObject:(Showtime *)value;
+- (void)removeShowtimesObject:(Showtime *)value;
+- (void)addShowtimes:(NSSet *)values;
+- (void)removeShowtimes:(NSSet *)values;
 
 @end

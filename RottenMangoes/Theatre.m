@@ -7,10 +7,16 @@
 //
 
 #import "Theatre.h"
+#import "Movie.h"
+#import "Showtime.h"
+
 
 @implementation Theatre
 
-
-
+@dynamic theatreName;
+@dynamic theatreType;
+@dynamic postalCode;
+@dynamic movies;
+@dynamic showtimes;
 
 @end
